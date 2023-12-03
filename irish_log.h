@@ -1,0 +1,65 @@
+#pragma once
+
+#define LOG_0 _1
+#define LOG_1 _42
+#define LOG_2 _41
+#define LOG_3 _27
+#define LOG_4 _40
+#define LOG_5 _8
+#define LOG_6 _26
+#define LOG_7 _18
+#define LOG_8 _39
+#define LOG_9 _12
+
+#define LOG(x) LOG_##x
+#define XLOG(x) LOG(x)
+
+#define INVLOG_00002 0
+#define INVLOG_00009 0
+#define INVLOG_00013 0
+#define INVLOG_00016 25
+#define INVLOG_00019 0
+#define INVLOG_00020 45
+#define INVLOG_00024 81
+#define INVLOG_00026 35
+#define INVLOG_00027 0
+#define INVLOG_00028 0
+#define INVLOG_00030 63
+#define INVLOG_00034 30
+#define INVLOG_00035 15
+#define INVLOG_00036 49
+#define INVLOG_00038 54
+#define INVLOG_00039 27
+#define INVLOG_00040 0
+#define INVLOG_00041 0
+#define INVLOG_00042 0
+#define INVLOG_00043 0
+#define INVLOG_00044 42
+#define INVLOG_00045 21
+#define INVLOG_00047 40
+#define INVLOG_00048 20
+#define INVLOG_00049 10
+#define INVLOG_00050 5
+#define INVLOG_00051 72
+#define INVLOG_00052 36
+#define INVLOG_00053 18
+#define INVLOG_00054 9
+#define INVLOG_00057 56
+#define INVLOG_00058 28
+#define INVLOG_00059 14
+#define INVLOG_00060 7
+#define INVLOG_00065 48
+#define INVLOG_00066 24
+#define INVLOG_00067 12
+#define INVLOG_00068 6
+#define INVLOG_00069 3
+#define INVLOG_00078 64
+#define INVLOG_00079 32
+#define INVLOG_00080 16
+#define INVLOG_00081 8
+#define INVLOG_00082 4
+#define INVLOG_00083 2
+#define INVLOG_00084 1
+
+??=define INVLOG(x) INVLOG_##x
+??=define XINVLOG(x) INVLOG(x)
