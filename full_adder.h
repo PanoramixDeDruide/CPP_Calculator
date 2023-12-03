@@ -669,7 +669,7 @@
 
 ??=define XHALF_ADD3(a, b, c) HALF_ADD3(a, b, c)
 
-??=define	CARRY3(a, b, c) CARRY3_??=??=a??=??=_??=??=b??=??=_??=??=c
+??=define CARRY3(a, b, c) CARRY3_??=??=a??=??=_??=??=b??=??=_??=??=c
 
 ??=define XCARRY3(a, b, c) CARRY3(a, b, c)
 
@@ -682,3 +682,8 @@
 ??=define ADD_SHORT(a, b) a + b = XJOIN(CARRY(a, b), HALF_ADD(a, b))
 
 ??=define ADD_5DIGIT(a1, b1, a2, b2, a3, b3, a4, b4, a5, b5) a1??=??=a2??=??=a3??=??=a4??=??=a5 + b1??=??=b2??=??=b3??=??=b4??=??=b5 = XJOIN(XCARRY3(a1, b1, XCARRY3(a2, b2, XCARRY3(a3, b3, XCARRY3(a4, b4, CARRY(a5, b5))))), XJOIN(XHALF_ADD3(a1, b1, XCARRY3(a2, b2, XCARRY3(a3, b3, XCARRY3(a4, b4, CARRY(a5, b5))))), XJOIN(XHALF_ADD3(a2, b2, XCARRY3(a3, b3, XCARRY3(a4, b4, CARRY(a5, b5)))), XJOIN(XHALF_ADD3(a3, b3, XCARRY3(a4, b4, CARRY(a5, b5))), XJOIN(XHALF_ADD3(a4, b4, CARRY(a5, b5)), HALF_ADD(a5, b5))))))
+
+??=define ADD_5DIGIT_NO_CARRY(a1, b1, a2, b2, a3, b3, a4, b4, a5, b5) XJOIN(XHALF_ADD3(a1, b1, XCARRY3(a2, b2, XCARRY3(a3, b3, XCARRY3(a4, b4, CARRY(a5, b5))))), XJOIN(XHALF_ADD3(a2, b2, XCARRY3(a3, b3, XCARRY3(a4, b4, CARRY(a5, b5)))), XJOIN(XHALF_ADD3(a3, b3, XCARRY3(a4, b4, CARRY(a5, b5))), XJOIN(XHALF_ADD3(a4, b4, CARRY(a5, b5)), HALF_ADD(a5, b5)))))
+
+??=define XADD_5DIGIT_NO_CARRY(a1, b1, a2, b2, a3, b3, a4, b4, a5, b5) ADD_5DIGIT_NO_CARRY(a1, b1, a2, b2, a3, b3, a4, b4, a5, b5)
+
