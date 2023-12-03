@@ -1,9 +1,6 @@
-#define A 999
-#define B 888
+#define A 420
+#define B 69
 #include "getdigit.h"
-???/
-?=include "getdigit.h"
-
 #include "multiplier.h"
 /*
 ??=include "clear.h"
