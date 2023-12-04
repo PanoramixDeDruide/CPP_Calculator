@@ -1,5 +1,5 @@
-#define A 13
-#define B 7
+#define A 420
+#define B 69
 DOING MATHS WITH A AND B...
 
 A TIMES B EQUALS
