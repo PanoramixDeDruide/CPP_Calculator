@@ -3,4 +3,4 @@
 #include "full_adder.h"
 #include "utils.h"
 
-XREORDER(XJOIN(_, A), XJOIN(_, B), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+XJOIN(___, XADD_CARRY(XJOIN(_, A), XJOIN(_, B), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
