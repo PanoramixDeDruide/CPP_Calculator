@@ -1,8 +1,8 @@
-#include "processed_numbers.h"
-#include "full_adder.h"
-#include "getdigit.h"
-#include "irish_log.h"
-#include "utils.h"
+#include <processed_numbers.h>
+#include <full_adder.h>
+#include <getdigit.h>
+#include <irish_log.h>
+#include <utils.h>
 
 #define A_ XJOIN(_, A)
 #define B_ XJOIN(_, B)
