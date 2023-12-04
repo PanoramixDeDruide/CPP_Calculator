@@ -11,7 +11,6 @@ int main(void) {
   #endif
   #undef A
   #undef B
-  #undef SOLUTION
   #define A BOB
   #define B JOE
   int i = 
