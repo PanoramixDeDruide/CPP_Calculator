@@ -33,6 +33,6 @@
 #endif
 #if TENS < 10
   #undef DIGITS
-  #include "digits.h"
-  #include "tens.h"
+  #include <digits.h>
+  #include <tens.h>
 #endif

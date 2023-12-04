@@ -35,8 +35,8 @@
   #undef DIGITS
   #undef TENS
   #undef HUNDREDS
-  #include "digits.h"
-  #include "tens.h"
-  #include "hundreds.h"
-  #include "thousands.h"
+  #include <digits.h>
+  #include <tens.h>
+  #include <hundreds.h>
+  #include <thousands.h>
 #endif

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cpp -P -Wno-trigraphs calculator.h -o calculator
-cpp -P -trigraphs calculator -o calculator2
-cpp -P -trigraphs calculator2
-rm calculator calculator2
+if [[ ! -f processed_numbers.h ]]; then
+	cpp -P -Wno-trigraphs -I number_sources number_sources/numbers.h -o processed_numbers.h
+fi
+#cpp -P -Wno-trigraphs -trigraphs calculator.h

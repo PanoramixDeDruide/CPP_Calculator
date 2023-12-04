@@ -34,7 +34,7 @@
 #if HUNDREDS < 10
   #undef TENS
   #undef DIGITS
-  #include "digits.h"
-  #include "tens.h"
-  #include "hundreds.h"
+  #include <digits.h>
+  #include <tens.h>
+  #include <hundreds.h>
 #endif
