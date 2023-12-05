@@ -4,8 +4,53 @@
 #include <irish_log.h>
 #include <utils.h>
 
+#undef A_
+#undef B_
+
 #define A_ XJOIN(_, A)
 #define B_ XJOIN(_, B)
+
+#undef X1Y1
+#undef X1Y2
+#undef X1Y3
+#undef X1Y4
+#undef X1Y5
+#undef X1Y6
+
+#undef X2Y1
+#undef X2Y2
+#undef X2Y3
+#undef X2Y4
+#undef X2Y5
+#undef X2Y6
+
+#undef X3Y1
+#undef X3Y2
+#undef X3Y3
+#undef X3Y4
+#undef X3Y5
+#undef X3Y6
+
+#undef X4Y1
+#undef X4Y2
+#undef X4Y3
+#undef X4Y4
+#undef X4Y5
+#undef X4Y6
+
+#undef X1Y1
+#undef X2Y2
+#undef X3Y3
+#undef X4Y4
+#undef X5Y5
+#undef X6Y6
+
+#undef X1Y1
+#undef X2Y2
+#undef X3Y3
+#undef X4Y4
+#undef X5Y5
+#undef X6Y6
 
 #define X1Y1 XSUM(XLOG(ARGN(5,(A_, 0, 0, 0, 0, 0))), XLOG(ARGN(5,(B_, 0, 0, 0, 0, 0))), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 #define X2Y1 XSUM(XLOG(ARGN(4,(A_, 0, 0, 0, 0, 0))), XLOG(ARGN(5,(B_, 0, 0, 0, 0, 0))), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
@@ -44,6 +89,43 @@
 #define X5Y6 XSUM(XLOG(ARGN(1,(A_, 0, 0, 0, 0, 0))), XLOG(ARGN(0,(B_, 0, 0, 0, 0, 0))), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 #define X6Y6 XSUM(XLOG(ARGN(0,(A_, 0, 0, 0, 0, 0))), XLOG(ARGN(0,(B_, 0, 0, 0, 0, 0))), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
+#undef ONES_
+#undef ONES_CARRY_
+#undef TENS_1
+#undef TENS_1_CARRY
+#undef TENS_2
+#undef TENS_2_CARRY
+#undef HUNDREDS_1
+#undef HUNDREDS_1_CARRY
+#undef HUNDREDS_2
+#undef HUNDREDS_2_CARRY
+#undef HUNDREDS_3
+#undef HUNDREDS_3_CARRY
+#undef THOUSANDS_1
+#undef THOUSANDS_1_CARRY
+#undef THOUSANDS_2
+#undef THOUSANDS_2_CARRY
+#undef THOUSANDS_3
+#undef THOUSANDS_3_CARRY
+#undef THOUSANDS_4
+#undef THOUSANDS_4_CARRY
+#undef TEN_THOUSANDS_1
+#undef TEN_THOUSANDS_1_CARRY
+#undef TEN_THOUSANDS_2
+#undef TEN_THOUSANDS_2_CARRY
+#undef TEN_THOUSANDS_3
+#undef TEN_THOUSANDS_3_CARRY
+#undef TEN_THOUSANDS_4
+#undef TEN_THOUSANDS_4_CARRY
+#undef TEN_THOUSANDS_5
+#undef TEN_THOUSANDS_5_CARRY
+#undef HUNDRED_THOUSANDS_1
+#undef HUNDRED_THOUSANDS_2
+#undef HUNDRED_THOUSANDS_3
+#undef HUNDRED_THOUSANDS_4
+#undef HUNDRED_THOUSANDS_5
+#undef HUNDRED_THOUSANDS_6
+
 #define ONES_ XJOIN(_, ARGN(5,(XJOIN(_, XINVLOG(X1Y1)))))
 #define ONES_CARRY XJOIN(_, XJOIN(ARGN(4,(XJOIN(_, XINVLOG(X1Y1)))), 0))
 #define TENS_1 XJOIN(_, XJOIN(ARGN(5,(XJOIN(_, XINVLOG(X1Y2)))), 0))
@@ -81,6 +163,25 @@
 #define HUNDRED_THOUSANDS_5 XJOIN(_, XJOIN(ARGN(5,(XJOIN(_, XINVLOG(X5Y2)))), 00000))
 #define HUNDRED_THOUSANDS_6 XJOIN(_, XJOIN(ARGN(5,(XJOIN(_, XINVLOG(X6Y1)))), 00000))
 
+#undef STEP1
+#undef STEP2
+#undef STEP3
+#undef STEP4
+#undef STEP5
+#undef STEP6
+#undef STEP7
+#undef STEP8
+#undef STEP9
+#undef STEP10
+#undef STEP11
+#undef STEP12
+#undef STEP13
+#undef STEP14
+#undef STEP15
+#undef STEP16
+#undef STEP17
+#undef STEP18
+
 #define STEP1 XJOIN(_, XSUM(ONES_, ONES_CARRY, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 #define STEP2 XJOIN(_, XSUM(TENS_1, TENS_1_CARRY, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 #define STEP3 XJOIN(_, XSUM(HUNDREDS_1, HUNDREDS_1_CARRY, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
@@ -100,6 +201,16 @@
 #define STEP17 XJOIN(_, XSUM(TEN_THOUSANDS_5, TEN_THOUSANDS_5_CARRY, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 #define STEP18 XJOIN(_, XSUM(HUNDRED_THOUSANDS_5, HUNDRED_THOUSANDS_6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 
+#define PAGE1
+#define PAGE2
+#define PAGE3
+#define PAGE4
+#define PAGE5
+#define PAGE6
+#define PAGE7
+#define PAGE8
+#define PAGE9
+
 #define PACE1 XJOIN(_, XSUM(STEP1, STEP2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 #define PACE2 XJOIN(_, XSUM(STEP3, STEP4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 #define PACE3 XJOIN(_, XSUM(STEP5, STEP6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
@@ -110,15 +221,27 @@
 #define PACE8 XJOIN(_, XSUM(STEP15, STEP16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 #define PACE9 XJOIN(_, XSUM(STEP17, STEP18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 
+#undef JUMP1
+#undef JUMP2
+#undef JUMP3
+#undef JUMP4
+
 #define JUMP1 XJOIN(_, XSUM(PACE1, PACE2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 #define JUMP2 XJOIN(_, XSUM(PACE3, PACE4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 #define JUMP3 XJOIN(_, XSUM(PACE5, PACE6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 #define JUMP4 XJOIN(_, XSUM(PACE7, PACE8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 
+#undef LEAGUE1
+#undef LEAGUE2
+
 #define LEAGUE1 XJOIN(_, XSUM(JUMP1, JUMP2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 #define LEAGUE2 XJOIN(_, XSUM(JUMP3, JUMP4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 
+#undef MARATHON1
+
 #define MARATHON1 XJOIN(_, XSUM(LEAGUE1, LEAGUE2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 
-XJOIN(___, XSUM(MARATHON1, PACE9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+#undef SOLUTION
+
+#define SOLUTION XJOIN(___, XSUM(MARATHON1, PACE9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
 

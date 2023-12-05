@@ -13,9 +13,8 @@ int main(void) {
   #undef B
   #define A BOB
   #define B JOE
-  int i = 
   #include <adder.h>
-  ;
+  int i = SOLUTION;
 
   printf("%d + %d = %d\n", BOB, JOE, i);
 
@@ -30,9 +29,8 @@ int main(void) {
   #undef B
   #define A ROMEO
   #define B JULIET
-  i = 
   #include <multiplier.h>
-  ;
+  i = SOLUTION;
   printf("%d * %d = %d\n", ROMEO, JULIET, i);
 
   // Finally, subtraction. Here we go, subtract Y from X.
@@ -47,9 +45,8 @@ int main(void) {
   #undef B
   #define A X
   #define B Y
-  i = 
   #include <subtractor.h>
-  ;
+  i = SOLUTION;
   printf("%d - %d = %d\n", X, Y, i);
   return (0);
 }
