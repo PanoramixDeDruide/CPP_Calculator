@@ -217,3 +217,13 @@
     #include <divider.h>
   #endif
 #endif
+
+#undef QUAD_1
+#undef QUAD_2
+#undef QUAD_3
+#undef QUAD_4
+#undef QUAD_5
+#undef QUAD_6
+#undef QUAD_7
+#undef QUAD_8
+

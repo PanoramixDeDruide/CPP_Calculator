@@ -71,5 +71,25 @@ int main(void) {
   #include <sqrt.h>
   i = SOLUTION;
   printf("sqrt(%d) >= %d (and less than 1 more)\n", SQUARE_STUFF, i);
+
+  #ifndef ALPHA
+  # define ALPHA 1
+  #endif
+  #ifndef BRAVO
+  # define BRAVO 999960 // -40 in 10's complement
+  #endif
+  #ifndef CHARLIE
+  #  define CHARLIE 300
+  #endif
+  #undef A_QUAD
+  #define A_QUAD ALPHA
+  #undef B_QUAD
+  #define B_QUAD BRAVO
+  #undef C_QUAD
+  #define C_QUAD CHARLIE
+  #include <quad.h>
+  i = SOLUTION_QUAD1;
+  int j = SOLUTION_QUAD2;
+  printf("The solutions to %d x^2 + %d (-40 in ten's complement) x + %d are %d and %d.\n", A_QUAD, B_QUAD, C_QUAD, SOLUTION_QUAD1, SOLUTION_QUAD2);
   return (0);
 }
