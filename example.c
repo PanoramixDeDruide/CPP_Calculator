@@ -49,6 +49,20 @@ int main(void) {
   i = SOLUTION;
   printf("%d - %d = %d\n", X, Y, i);
 
+  #ifndef ELMO
+  # define ELMO 100000
+  #endif
+  #ifndef GROVER
+  # define GROVER 3
+  #endif
+  #undef A
+  #undef B
+  #define A ELMO
+  #define B GROVER
+  #include <divider.h>
+  i = SOLUTION;
+  printf("%d / %d = %d\n", ELMO, GROVER, i);
+
   #ifndef SQUARE_STUFF
   # define SQUARE_STUFF 64
   #endif

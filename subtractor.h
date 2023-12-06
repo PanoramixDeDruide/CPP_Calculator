@@ -18,3 +18,21 @@
     #define SOLUTION8 XJOIN(___, XSUM(XJOIN(_, XSUM(XJOIN(_, Q), XJOIN(__, R), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)), _1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
   #endif
 #endif
+#ifdef SQRT_5
+  #ifndef SQRT_6
+    #undef SOLUTION10
+    #define SOLUTION10 XJOIN(___, XSUM(XJOIN(_, XSUM(XJOIN(_, Y), XJOIN(__, Z), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)), _1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+  #endif
+#endif
+#ifdef SQRT_6
+  #ifndef SQRT_7
+    #undef SOLUTION12
+    #define SOLUTION12 XJOIN(___, XSUM(XJOIN(_, XSUM(XJOIN(_, Y1), XJOIN(__, Z1), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)), _1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+  #endif
+#endif
+#ifdef SQRT_7
+  #ifndef SQRT_8
+    #undef SOLUTION14
+    #define SOLUTION14 XJOIN(___, XSUM(XJOIN(_, XSUM(XJOIN(_, Y2), XJOIN(__, Z2), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)), _1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+  #endif
+#endif

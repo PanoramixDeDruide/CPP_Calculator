@@ -5,8 +5,6 @@
 
 #define A_SQRT_ XJOIN(_, A)
 
-#undef ASSEMBLE
-#define ASSEMBLE(a1, a2, a3, a4, a5, a6, ...) XJOIN(___, XJOIN(ARGN(0, (a1, 0, 0, 0, 0, 0)), XJOIN(ARGN(1, (a1, 0, 0, 0, 0, 0)), XJOIN(ARGN(2, (a1, 0, 0, 0, 0, 0)), XJOIN(ARGN(3, (a1, 0, 0, 0, 0, 0)), XJOIN(ARGN(4, (a1, 0, 0, 0, 0, 0)), ARGN(5, (a1, 0, 0, 0, 0, 0))))))))
 #undef CIFY
 #define CIFY(a1, a2, a3, a4, a5, a6, b1, b2, b3, b4, b5, b6, ...) XJOIN(___, XJOIN(ARGN(2, (a1, 0, 0, 0, 0, 0)), XJOIN(ARGN(3, (a1, 0, 0, 0, 0, 0)), XJOIN(ARGN(4, (a1, 0, 0, 0, 0, 0)), XJOIN(ARGN(5, (a1, 0, 0, 0, 0, 0)), XJOIN(ARGN(4, (a2, 0, 0, 0, 0, 0)), ARGN(5, (a2, 0, 0, 0, 0, 0))))))))
 

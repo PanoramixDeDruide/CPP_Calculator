@@ -17,11 +17,13 @@ A TIMES B EQUALS SOLUTION
 A PLUS B EQUALS SOLUTION
 #include <subtractor.h>
 A MINUS B EQUALS SOLUTION
+#include <divider.h>
+A DIVIDED BY B EQUALS SOLUTION
 
 #undef A
 #define A 42
 #undef B
-#define B 7
+#define B 6
 
 #include <multiplier.h>
 A TIMES B EQUALS SOLUTION
@@ -29,3 +31,5 @@ A TIMES B EQUALS SOLUTION
 A PLUS B EQUALS SOLUTION
 #include <subtractor.h>
 A MINUS B EQUALS SOLUTION
+#include <divider.h>
+A DIVIDED BY B EQUALS SOLUTION
