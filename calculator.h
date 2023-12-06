@@ -1,3 +1,15 @@
+#define A_QUAD 1
+#define B_QUAD 999960
+#define C_QUAD 300
+
+#include <quad.h>
+A_QUAD * x^2 + B_QUAD (-40) * x + C_QUAD = 0 has NUM_SOLUTIONS_QUAD solutions, being
+SOLUTION_QUAD1 and SOLUTION_QUAD2
+
+#define A 999999
+#define B 2
+#include <divider.h>
+SOLUTION
 #define A 169
 #include <sqrt.h>
 THE SQUARE ROOT OF A IS AT LEAST SOLUTION AND LESS THAN 1 MORE
