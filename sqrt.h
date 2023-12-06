@@ -13,7 +13,6 @@
 #undef PAIR2
 #undef PAIR3
 
-#define PAIR0 _0
 #define PAIR1 0, 0, 0, 0, ARGN(4, (A_SQRT_, 0, 0, 0, 0, 0)), ARGN(5, (A_SQRT_, 0, 0, 0, 0, 0))
 #define PAIR2 0, 0, 0, 0, ARGN(2, (A_SQRT_, 0, 0, 0, 0, 0)), ARGN(3, (A_SQRT_, 0, 0, 0, 0, 0))
 #define PAIR3 0, 0, 0, 0, ARGN(0, (A_SQRT_, 0, 0, 0, 0, 0)), ARGN(1, (A_SQRT_, 0, 0, 0, 0, 0))
