@@ -33,7 +33,7 @@ int main(void) {
   i = SOLUTION;
   printf("%d * %d = %d\n", ROMEO, JULIET, i);
 
-  // Finally, subtraction. Here we go, subtract Y from X.
+  // Then, subtraction. Here we go, subtract Y from X.
 
   #ifndef X
   # define X 123456
@@ -48,5 +48,14 @@ int main(void) {
   #include <subtractor.h>
   i = SOLUTION;
   printf("%d - %d = %d\n", X, Y, i);
+
+  #ifndef SQUARE_STUFF
+  # define SQUARE_STUFF 64
+  #endif
+  #undef A
+  #define A SQUARE_STUFF
+  #include <sqrt.h>
+  i = SOLUTION;
+  printf("sqrt(%d) >= %d (and less than 1 more)\n", SQUARE_STUFF, i);
   return (0);
 }
